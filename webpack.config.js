@@ -19,7 +19,7 @@ module.exports = {
     optimization: {
         minimizer: [
             new OptimizeCssAssetsPlugin({}),
-            new UglifyJsPlugin({})
+            // new UglifyJsPlugin({})
         ]
     },
     plugins: [
@@ -57,7 +57,14 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|svg|gif)$/,
-                use: ['file-loader']
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    outputPath: 'images',
+                    publicPath: 'images',
+                    emitFile: true,
+                    esModule: false
+                }
             },
             {
                 test: /\.(ttf|woff|woff2|eot)$/,
