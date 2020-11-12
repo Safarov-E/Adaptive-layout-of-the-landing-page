@@ -1,8 +1,8 @@
-import '../styles/style.scss'
-import $ from 'jquery'
+import '../styles/style.scss';
+import $ from "jquery";
 
 $('.wrapper').addClass('loaded');
-$('.icon-menu').click(function(event) {
+$('.icon__menu').click(function(event) {
     $(this).toggleClass('active');
     $('.menu__body').toggleClass('active');
     $('body').toggleClass('lock');

@@ -1,11 +1,16 @@
 @mixin flexbox(){
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
     font-size: 0;
 }
 @mixin tr($x, $y, $z) {
     transform: translate3d($x, $y, $z);
+}
+@mixin anim($time, $delay) {
+    transition: all $time ease $delay;
+}
+@mixin scale($num) {
+    transform: scale($num);
+}
+@mixin rotate($deg) {
+    transform: rotate($deg);
 }
