@@ -176,6 +176,14 @@ $minwidth: 320px;
         z-index: 2;
         opacity: 0;
         visibility: hidden;
+        span {
+            margin: 10px 0px 0px 0px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2.8px;
+            text-transform: uppercase;
+            color: #fff;
+        }
     }
     &__image {
         position: absolute;
@@ -206,7 +214,6 @@ $minwidth: 320px;
     &__icon {
         margin: 0px 0px 35px 0px;
     }
-    margin: auto;
     &__title {
         color: #353738;
         font-size: 18px;
@@ -223,5 +230,47 @@ $minwidth: 320px;
         font-size: 24px;
         font-style: italic;
         line-height: 34px;
+    }
+    @media (max-width: 767px) {
+        padding: 50px 0 30px 0;
+        &__icon {
+            margin: 0px 0px 25px 0px;
+        }
+        &__title {
+            margin: 0px 0px 15px 0px;
+        }
+    }
+}
+.shop {
+    &__body {
+        @include flexbox();
+    }
+    &__column {
+        flex: 0 1 16.665%;
+        &_b {
+            flex: 0 1 33.333%;
+        }
+    }
+    &__block {}
+    &__footer {}
+    &__btn {}
+}
+.block-shop {
+    height: 100%;
+    &__row {
+        @include flexbox();
+    }
+    &__column {
+        flex: 0 1 50%;
+    }
+    &__item {
+        height: auto;
+        padding: 0px 0px 50% 0px;
+        &_b {
+            padding: 0px 0px 200.5% 0px;
+        }
+        &_l {
+            padding: 0px 0px 100% 0px;
+        }
     }
 }
