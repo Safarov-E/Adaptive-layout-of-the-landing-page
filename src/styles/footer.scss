@@ -1,0 +1,45 @@
+@import './mixins.scss';
+
+.footer {
+    background-color: #f7f7f7;
+    &__row {
+        @include flexbox();
+        padding: 100px 0;
+        align-items: center;
+    }
+    &__column {
+        flex: 0 1 33.333%;
+    }
+    &__address {
+        color: #848789;
+        font-size: 14px;
+        line-height: 18px;
+        p {
+            &:first-child {
+                font-weight: 700;
+            }
+        }
+    }
+    &__social {}
+    &__dev {}
+}
+.social {
+    @include flexbox();
+    justify-content: center;
+    align-items: center;
+    &__link {
+        margin: 0px 7.5px;
+    }
+}
+.dev {
+    @include flexbox();
+    align-items: center;
+    justify-content: flex-end;
+    &__text {
+        color: #848789;
+        font-size: 14px;
+        font-style: italic;
+        padding: 0px 9px 0px 0px;
+    }
+    &__icon {}
+}
